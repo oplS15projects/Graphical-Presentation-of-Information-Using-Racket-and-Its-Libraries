@@ -1,4 +1,4 @@
-# Graphical-Presentation-of-Information-using-Racket-It-s-Libraries
+# Graphical-Presentation-of-Information-Using-Racket-and-Its-Libraries
 ##Lapsus OPL S15 Final Project
 
 ###First Milestone
