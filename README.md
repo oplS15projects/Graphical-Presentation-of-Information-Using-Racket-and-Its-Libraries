@@ -2,7 +2,7 @@
 ##Lapsus OPL S15 Final Project
 
 ###First Milestone
-* slides drafted in powerpoint
+* Slides drafted in powerpoint
 * Outline coded in rkt
-* titles and textual info added
-* styles applied (draft)
+* Titles and textual info added
+* Styles applied at basic level(draft) such as coloring
