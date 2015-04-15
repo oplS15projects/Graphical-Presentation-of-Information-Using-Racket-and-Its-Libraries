@@ -1,9 +1,44 @@
 #lang slideshow
 
-;;type (run) in cmnd line to run
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Graphical-Presentation-of-Information-Using-Racket-and-Its-Libraries
+
+;;Team Lapsus
+
+;;Alex Nevers & Merve Tuccar
+;;OPL Spring 2015 Final Project
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; NOTES:
+;;******type (run) in cmnd line to run******
+
 ;;if you use (spacebar) to skip through slides, they will appear out of order
 ;;if you let them timeout, they will be in order
+
 ;;change timeout to 2 if you want to do a quick lookover in order
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;SLIDE COMMANDS:
+;;;;;Ending:
+
+;;Alt-q, Meta-q, or Cmd-q:                end slide show
+;;Esc:                                    if confirmed, end show
+
+;;;;Navigation:
+
+;;Right arrow, Space, f, n, or click:     next slide
+;;Left arrow, Backspace, Delete, or b:    previous slide
+;;g:                                      last slid  
+;;1:                                      first slide
+
+;;;;Misc:
+
+;;Alt-g, Cmd-g, or Meta-g: select a slide
+;;Alt-p, Cmd-p, or Meta-p: show/hide slide number
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 
