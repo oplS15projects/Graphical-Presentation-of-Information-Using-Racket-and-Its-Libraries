@@ -3,7 +3,7 @@
 
 ####Notes
 * To run this program, type (run) after compiling
-* Images in slideshow will not display unless you download the dropbox directory, moe the source code to that folder, and run from there.
+* Images in repo must be in same folder as code to work. Backup copy of images canbe download from dropbox link below-- just move code to the iamge folder before running.
 * Slides are timed to change after twenty seconds. If you attempt to manually navigate the slideshow, slides will appear out of order.
 
 ####Links
