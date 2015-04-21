@@ -3,7 +3,7 @@
 
 ####Notes
 * To run this program, type (run) after compiling
-* Images in slideshow will not display unless you download the dropbox directory, moe the source code to that folder, and run from there.
+* Images in repo must be in same folder as code to work. Backup copy of images canbe download from dropbox link below-- just move code to the iamge folder before running.
 * Slides are timed to change after twenty seconds. If you attempt to manually navigate the slideshow, slides will appear out of order.
 
 ####Links
@@ -14,8 +14,8 @@
 
 ###First Milestone
 * Slides drafted in powerpoint
-* Outline coded in rkt
-* Titles and textual info added
+* titles and textual info added
+* styles applied (draft)
 * Styles applied at basic level (draft) such as coloring
 
 ###Second Milestone
@@ -23,3 +23,4 @@
 * Most text formatted
 * All images added to slides
 * Slideshow now runs on loop
+
