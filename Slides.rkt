@@ -56,13 +56,13 @@
 
 (slide 
  #:title "CYBERDYNE SYSTEMS PRESENTS"
- #:timeout 20 
+ #:timeout 15
  (bitmap "Cyberdyne_logo_OLD.jpg" )
  (tt "S k y n e t: The Future of A.I."))
 
 (slide
  #:title "CREATING THE FUTURE OF TECHNOLOGY"
- #:timeout 20 #:gap-size 12
+ #:timeout 15 #:gap-size 12
  (para #:width 900 #:fill? #t (tt "CYBERDYNE SYSTEMS") "has been working with the American people, for the American people, for over a decade. Within this decade we've pioneered new breakthroughs in:")
 
  (t " ")
@@ -83,7 +83,7 @@
 
 (slide
  #:title "WHAT LIES AHEAD"
- #:timeout 20
+ #:timeout 15
  #:gap-size 19
  
  (lt-superimpose 
@@ -104,7 +104,7 @@
 
 (slide
  #:title "INTRODUCING: SKYNET"
- #:timeout 20  #:gap-size 19
+ #:timeout 15  #:gap-size 19
  
  (lt-superimpose 
    (hc-append 
@@ -124,7 +124,7 @@
 
 (slide
  #:title "INTRODUCING: SKYNET"
- #:timeout 20  #:gap-size 10
+ #:timeout 15  #:gap-size 10
 
  (t "This is the future of communication.")
  (t "The future of National Defense.")
@@ -137,7 +137,7 @@
   
 (slide
  #:title "WHAT IS SKYNET?"
- #:timeout 20 
+ #:timeout 15 
 (para (tt "SKYNET") "is:")
 
  (hc-append 
@@ -151,7 +151,7 @@
 
 (slide
  #:title "SAFETY FROM THE SKIES"
- #:timeout 20 
+ #:timeout 15 
  (para #:width 900 #:fill? #t "With the entirety of" (tt "CYNDERDYNE’s") "satellites at it’s fingertips," (tt "SKYNET") "has complete control of the skies. With this power," (tt "SKYNET") "can detect aerial attacks from enemy countries the instant they are launched.")
 
  (hc-append (bitmap "map_targets.jpg")
@@ -160,14 +160,14 @@
 
 (slide
  #:title "IMPENETRABLE SUBTERRANEAN CORE"
- #:timeout 2
+ #:timeout 15
  (para #:width 900 "The" (tt "SKYNET") "base is located in Cheyenne Mountain, Colorado, the world's most heavily armored and defended mountain. Hollowed out, reinforced and armored, Cheyenne Mountain is capable of withstanding a direct hit from a nuclear missile. ")
  (t " ")
  (bitmap "T23d-skynet-core.png"))
 
 (slide
  #:title "STATE OF THE ART A.I."
- #:timeout 20 
+ #:timeout 15 
 (lt-superimpose 
    (hc-append
               (para #:align 'left #:fill? #t #:width 470 "         ")
@@ -180,7 +180,7 @@
  
 (slide
  #:title "OPERATIONS BEGIN SOON"
- #:timeout 20 
+ #:timeout 15 
 (para #:width 900 #:align 'center "With" (tt "CYBERDYNE’s") "innovation and tech," (tt "SKYNET") "is set to be the safety net for the world. Global conflict will stalemate in the face of this technological giant, ever-watching from the skies.")
                          
  (lt-superimpose 
@@ -197,7 +197,7 @@
   (current-font-size 28)
 
 (slide
-#:timeout 20 
+#:timeout 10
  (t "Making the future safer and friendlier... for everyone.")
  (hline 1000 5)
  
@@ -218,3 +218,4 @@
   
   (run))
 
+(run)
