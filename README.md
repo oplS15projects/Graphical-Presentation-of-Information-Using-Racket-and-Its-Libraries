@@ -12,6 +12,13 @@
 * Screencap of WIP slides [here.](http://imgur.com/a/CTYgP)
 
 
+####References:
+* Pict Library
+* Slideshow Library
+* GUI Library
+* [Slide assembly code](http://lists.racket-lang.org/users/archive/2011-February/044148.html)
+
+
 ###First Milestone
 * Slides drafted in powerpoint
 * titles and textual info added
@@ -24,3 +31,8 @@
 * All images added to slides
 * Slideshow now runs on loop
 
+Final Release:
+* Music added
+* Slideshow starts automatically again
+* Stying finalized
+* Background added
