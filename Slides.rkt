@@ -190,7 +190,8 @@
                 
                  (vl-append (vl-append (t " ")
                                        (t " "))
-                            (vl-append (para #:align 'center #:width 470(tt "SKYNET") "goes online on August 4, 1997.")
+                            (vl-append (para #:align 'center #:width 470(tt "SKYNET") "goes online on August 4, 1997.
+                             ")
                                        (para #:align 'center #:width 470 "Your future is in our trusted hands." )))))
  
   (current-font-size 28)
@@ -198,18 +199,21 @@
 (slide
 #:timeout 20 
  (t "Making the future safer and friendlier... for everyone.")
- (t "  ")
+ (hline 1000 5)
+ 
  (lt-superimpose
                 (hc-append
                            (para #:align 'left #:fill? #t #:width 450 "         ")
                            (bitmap  "cyberdyne_building_front.jpg"))
              
                 (vl-append (vl-append (t " ")
-                                      (para #:width 450 #:align 'left "© 1997" (tt "CYBERDYNE SYSTEMS") "      ALL RIGHTS RESERVED"))
+                                      (para #:width 450 #:align 'left "© 1997" (tt "CYBERDYNE SYSTEMS") "      ALL RIGHTS RESERVED
+                                       "))
                            (vl-append (t " ")
                                       (para #:width 450 #:align 'left "18144 El Camino Real, Sunnyvale, California")  )))
  
-         
+ (hline 1000 5)
+  (t " ")
  (t "https://www.linkedin.com/company/cyberdyne-systems-corporation"))
   
   (run))
