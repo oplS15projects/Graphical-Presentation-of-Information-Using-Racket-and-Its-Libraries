@@ -1,5 +1,3 @@
-#lang slideshow
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Graphical-Presentation-of-Information-Using-Racket-and-Its-Libraries
 
@@ -40,21 +38,31 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(current-font-size 32)
-(current-main-font "Verdana")
-(current-title-color "blue")
+#lang slideshow
+(require slideshow/play)
+(require racket/gui)
+(require pict images/icons/control images/icons/style)
 
+(current-font-size 32)
+(current-main-font 'swiss)
+
+(current-title-color "DarkSlateBlue")
+(current-titlet (lambda (s)
+  (colorize (text s (current-main-font) 45)
+            (current-title-color))))
+            
+            
 (define (run)
 
 (slide 
  #:title "CYBERDYNE SYSTEMS PRESENTS"
- #:timeout 20 
+ #:timeout 15
  (bitmap "Cyberdyne_logo_OLD.jpg" )
  (tt "S k y n e t: The Future of A.I."))
 
 (slide
  #:title "CREATING THE FUTURE OF TECHNOLOGY"
- #:timeout 20 #:gap-size 12
+ #:timeout 15 #:gap-size 12
  (para #:width 900 #:fill? #t (tt "CYBERDYNE SYSTEMS") "has been working with the American people, for the American people, for over a decade. Within this decade we've pioneered new breakthroughs in:")
 
  (t " ")
@@ -64,18 +72,18 @@
               (para #:align 'left #:fill? #t #:width 470 "         ")
               (bitmap  "cyberdyne_behind_the_scenes.jpg")) 
   
-   (vl-append (item "Artificial Intelligence") 
+   (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Artificial Intelligence") 
               (vl-append 
-                         (vl-append (item "Neural Network Processes")
-                                    (item #:width 470 "Advanced Robotics for Medicine"))
-                         (vl-append (item "Consumer Products")
-                                    (item "Defense"))))))
+                         (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Neural Network Processes")
+                                    (item #:bullet (bitmap (arrowhead 20 0)) #:width 470 "Advanced Robotics for Medicine"))
+                         (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Consumer Products")
+                                    (item  #:bullet (bitmap (arrowhead 20 0)) "Defense"))))))
 
 (current-font-size 28)
 
 (slide
  #:title "WHAT LIES AHEAD"
- #:timeout 20
+ #:timeout 15
  #:gap-size 19
  
  (lt-superimpose 
@@ -96,7 +104,7 @@
 
 (slide
  #:title "INTRODUCING: SKYNET"
- #:timeout 20  #:gap-size 19
+ #:timeout 15  #:gap-size 19
  
  (lt-superimpose 
    (hc-append 
@@ -116,7 +124,7 @@
 
 (slide
  #:title "INTRODUCING: SKYNET"
- #:timeout 20  #:gap-size 10
+ #:timeout 15  #:gap-size 10
 
  (t "This is the future of communication.")
  (t "The future of National Defense.")
@@ -129,21 +137,21 @@
   
 (slide
  #:title "WHAT IS SKYNET?"
- #:timeout 20 
+ #:timeout 15 
 (para (tt "SKYNET") "is:")
 
  (hc-append 
             (bitmap "satellite.jpg")
                 
-            (vl-append (item #:align 'left #:fill? #t #:width 500 "The world's first Automated Defense Network, processing information at ninety teraflops.")
-                       (vl-append (item #:align 'left #:fill? #t #:width 500 "The controlling force behind all" (tt "CYBERDYNE") "satellites." (tt "SKYNET") "pools data from satellites, develops tactics and coordinates attacks.")
-                                  (item  #:align 'left #:fill? #t #:width 500 "The control over everything which contains a" (tt "CYBERDYNE SYSTEMS") "CPU."))
+            (vl-append (item #:bullet (bitmap (arrowhead 20 0)) #:align 'left #:fill? #t #:width 500 "The world's first Automated Defense Network, processing information at ninety teraflops.")
+                       (vl-append (item #:bullet (bitmap (arrowhead 20 0)) #:align 'left #:fill? #t #:width 500 "The controlling force behind all" (tt "CYBERDYNE") "satellites." (tt "SKYNET") "pools data from satellites, develops tactics and coordinates attacks.")
+                                  (item #:bullet (bitmap (arrowhead 20 0)) #:align 'left #:fill? #t #:width 500 "The control over everything which contains a" (tt "CYBERDYNE SYSTEMS") "CPU."))
                   
  )))
 
 (slide
  #:title "SAFETY FROM THE SKIES"
- #:timeout 20 
+ #:timeout 15 
  (para #:width 900 #:fill? #t "With the entirety of" (tt "CYNDERDYNE’s") "satellites at it’s fingertips," (tt "SKYNET") "has complete control of the skies. With this power," (tt "SKYNET") "can detect aerial attacks from enemy countries the instant they are launched.")
 
  (hc-append (bitmap "map_targets.jpg")
@@ -152,14 +160,14 @@
 
 (slide
  #:title "IMPENETRABLE SUBTERRANEAN CORE"
- #:timeout 2
+ #:timeout 15
  (para #:width 900 "The" (tt "SKYNET") "base is located in Cheyenne Mountain, Colorado, the world's most heavily armored and defended mountain. Hollowed out, reinforced and armored, Cheyenne Mountain is capable of withstanding a direct hit from a nuclear missile. ")
- (bitmap "T23d-skynet-core.png")
- )
+ (t " ")
+ (bitmap "T23d-skynet-core.png"))
 
 (slide
  #:title "STATE OF THE ART A.I."
- #:timeout 20 
+ #:timeout 15 
 (lt-superimpose 
    (hc-append
               (para #:align 'left #:fill? #t #:width 470 "         ")
@@ -172,7 +180,7 @@
  
 (slide
  #:title "OPERATIONS BEGIN SOON"
- #:timeout 20 
+ #:timeout 15 
 (para #:width 900 #:align 'center "With" (tt "CYBERDYNE’s") "innovation and tech," (tt "SKYNET") "is set to be the safety net for the world. Global conflict will stalemate in the face of this technological giant, ever-watching from the skies.")
                          
  (lt-superimpose 
@@ -182,27 +190,32 @@
                 
                  (vl-append (vl-append (t " ")
                                        (t " "))
-                            (vl-append (para #:align 'center #:width 470(tt "SKYNET") "goes online on August 4, 1997.")
+                            (vl-append (para #:align 'center #:width 470(tt "SKYNET") "goes online on August 4, 1997.
+                             ")
                                        (para #:align 'center #:width 470 "Your future is in our trusted hands." )))))
  
   (current-font-size 28)
 
 (slide
-#:timeout 20 
+#:timeout 10
  (t "Making the future safer and friendlier... for everyone.")
- (t "  ")
+ (hline 1000 5)
+ 
  (lt-superimpose
                 (hc-append
                            (para #:align 'left #:fill? #t #:width 450 "         ")
                            (bitmap  "cyberdyne_building_front.jpg"))
              
                 (vl-append (vl-append (t " ")
-                                      (para #:width 450 #:align 'left "© 1997" (tt "CYBERDYNE SYSTEMS") "      ALL RIGHTS RESERVED"))
+                                      (para #:width 450 #:align 'left "© 1997" (tt "CYBERDYNE SYSTEMS") "      ALL RIGHTS RESERVED
+                                       "))
                            (vl-append (t " ")
                                       (para #:width 450 #:align 'left "18144 El Camino Real, Sunnyvale, California")  )))
  
-         
+ (hline 1000 5)
+  (t " ")
  (t "https://www.linkedin.com/company/cyberdyne-systems-corporation"))
   
   (run))
 
+(run)
