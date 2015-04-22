@@ -1,5 +1,3 @@
-#lang slideshow
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Graphical-Presentation-of-Information-Using-Racket-and-Its-Libraries
 
@@ -40,10 +38,20 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(current-font-size 32)
-(current-main-font "Verdana")
-(current-title-color "blue")
+#lang slideshow
+(require slideshow/play)
+(require racket/gui)
+(require pict images/icons/control images/icons/style)
 
+(current-font-size 32)
+(current-main-font 'swiss)
+
+(current-title-color "DarkSlateBlue")
+(current-titlet (lambda (s)
+  (colorize (text s (current-main-font) 45)
+            (current-title-color))))
+            
+            
 (define (run)
 
 (slide 
@@ -64,12 +72,12 @@
               (para #:align 'left #:fill? #t #:width 470 "         ")
               (bitmap  "cyberdyne_behind_the_scenes.jpg")) 
   
-   (vl-append (item "Artificial Intelligence") 
+   (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Artificial Intelligence") 
               (vl-append 
-                         (vl-append (item "Neural Network Processes")
-                                    (item #:width 470 "Advanced Robotics for Medicine"))
-                         (vl-append (item "Consumer Products")
-                                    (item "Defense"))))))
+                         (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Neural Network Processes")
+                                    (item #:bullet (bitmap (arrowhead 20 0)) #:width 470 "Advanced Robotics for Medicine"))
+                         (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Consumer Products")
+                                    (item  #:bullet (bitmap (arrowhead 20 0)) "Defense"))))))
 
 (current-font-size 28)
 
@@ -135,9 +143,9 @@
  (hc-append 
             (bitmap "satellite.jpg")
                 
-            (vl-append (item #:align 'left #:fill? #t #:width 500 "The world's first Automated Defense Network, processing information at ninety teraflops.")
-                       (vl-append (item #:align 'left #:fill? #t #:width 500 "The controlling force behind all" (tt "CYBERDYNE") "satellites." (tt "SKYNET") "pools data from satellites, develops tactics and coordinates attacks.")
-                                  (item  #:align 'left #:fill? #t #:width 500 "The control over everything which contains a" (tt "CYBERDYNE SYSTEMS") "CPU."))
+            (vl-append (item #:bullet (bitmap (arrowhead 20 0)) #:align 'left #:fill? #t #:width 500 "The world's first Automated Defense Network, processing information at ninety teraflops.")
+                       (vl-append (item #:bullet (bitmap (arrowhead 20 0)) #:align 'left #:fill? #t #:width 500 "The controlling force behind all" (tt "CYBERDYNE") "satellites." (tt "SKYNET") "pools data from satellites, develops tactics and coordinates attacks.")
+                                  (item #:bullet (bitmap (arrowhead 20 0)) #:align 'left #:fill? #t #:width 500 "The control over everything which contains a" (tt "CYBERDYNE SYSTEMS") "CPU."))
                   
  )))
 
@@ -154,8 +162,8 @@
  #:title "IMPENETRABLE SUBTERRANEAN CORE"
  #:timeout 2
  (para #:width 900 "The" (tt "SKYNET") "base is located in Cheyenne Mountain, Colorado, the world's most heavily armored and defended mountain. Hollowed out, reinforced and armored, Cheyenne Mountain is capable of withstanding a direct hit from a nuclear missile. ")
- (bitmap "T23d-skynet-core.png")
- )
+ (t " ")
+ (bitmap "T23d-skynet-core.png"))
 
 (slide
  #:title "STATE OF THE ART A.I."
