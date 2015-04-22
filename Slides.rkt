@@ -101,12 +101,13 @@
  (t " ")
  (tt "S k y n e t: The Future of A.I."))
 
+(current-font-size 36)
+
 (slide
  #:title "CREATING THE FUTURE OF TECHNOLOGY"
  #:timeout 15 #:gap-size 12
  (para #:width 900 #:fill? #t (tt "CYBERDYNE SYSTEMS") "has been working with the American people, for the American people, for over a decade. Within this decade we've pioneered new breakthroughs in:")
 
- (t " ")
  
  (lt-superimpose 
    (hc-append
@@ -196,7 +197,8 @@
  (para #:width 900 #:fill? #t "With the entirety of" (tt "CYNDERDYNE’s") "satellites at it’s fingertips," (tt "SKYNET") "has complete control of the skies. With this power," (tt "SKYNET") "can detect aerial attacks from enemy countries the instant they are launched.")
 
  (hc-append (bitmap "map_targets.jpg")
-            (para #:align 'left #:fill? #t #:width 300 "The" (tt "SKYNET") "can can calculate exact trajectory paths from space. These paths can then be ray traced onto precise maps for strategic use by our world leaders.")))
+             (hc-append (para #:width 20  " ")
+                        (para #:align 'left #:fill? #t #:width 300 "The" (tt "SKYNET") "can can calculate exact trajectory paths from space. These paths can then be ray traced onto precise maps for strategic use by our world leaders.")))
 
 
 (slide
