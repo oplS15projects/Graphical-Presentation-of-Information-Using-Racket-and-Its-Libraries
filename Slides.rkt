@@ -90,6 +90,8 @@
         pct))))
 
 ;;(background-image (bitmap "wallpaperg.jpg"))
+;;(play-sound "T2maintheme.wav" #t)
+
 (define (run)
 
 (slide 
