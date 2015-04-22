@@ -46,7 +46,7 @@
 (current-font-size 32)
 (current-main-font 'swiss)
 
-(current-title-color "DarkSlateBlue")
+(current-title-color "White")
 (current-titlet (lambda (s)
   (colorize (text s (current-main-font) 45)
             (current-title-color))))
@@ -89,15 +89,16 @@
              [pct  (if (slide-number) (add-slide-number pct) pct)])
         pct))))
 
-(background-image (bitmap "wallpaperg.jpg"))
-(play-sound "T2maintheme.wav" #t)
+(background-image (bitmap "wallpaperg2.jpg"))
+;;(play-sound "T2maintheme.wav" #t)
 
 (define (run)
 
 (slide 
  #:title "CYBERDYNE SYSTEMS PRESENTS"
- #:timeout 15
+ #:timeout 10
  (bitmap "Cyberdyne_logo_OLD.jpg" )
+ (t " ")
  (tt "S k y n e t: The Future of A.I."))
 
 (slide
@@ -119,7 +120,7 @@
                          (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Consumer Products")
                                     (item  #:bullet (bitmap (arrowhead 20 0)) "Defense"))))))
 
-(current-font-size 28)
+(current-font-size 30)
 
 (slide
  #:title "WHAT LIES AHEAD"
@@ -163,8 +164,8 @@
   
 
 (slide
- #:title "INTRODUCING: SKYNET"
- #:timeout 15  #:gap-size 10
+ #:title "INTRODUCING: YOUR FUTURE"
+ #:timeout 10  #:gap-size 10
 
  (t "This is the future of communication.")
  (t "The future of National Defense.")
