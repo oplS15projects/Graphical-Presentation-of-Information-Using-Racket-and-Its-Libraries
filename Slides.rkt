@@ -232,7 +232,7 @@
                 
                  (vl-append (vl-append (t " ")
                                        (t " "))
-                            (vl-append (para #:align 'center #:width 400(tt "SKYNET") "goes online on August 4, 1997.
+                            (vl-append (para #:align 'center #:width 420(tt "SKYNET") "goes online on August 4, 1997.
                              ")
                                        (para #:align 'center #:width 470 "Your future is in our trusted hands." )))))
  
