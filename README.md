@@ -1,14 +1,22 @@
 # Graphical Presentation of Information Using Racket and Its Libraries
-##Lapsus OPL S15 Final Project
+##Team Lapsus OPL S15 Final Project @UMass Lowell CS
 ###Alex Nevers and Merve Tuccar
 
 ##Overview
-This project uses multiple Racket libraries to present an aesthetically pleasing and informative presentation on military grade A.I. 
+This project uses multiple Racket libraries to present an aesthetically pleasing and informative presentation on military grade A.I.. This was an interesting project because Racket does not provide a "What You See Is What You Get" (WYSIWYG) interface such as MS PowerPoint, so we constructed our slides from the scratch. Slideshow, sound and pict Racket libraries are used for implementing the slides. There are 10 slides in total. The project was challenging because the documentation and examples on the libraries we used was very limited. 
+
+Overall, we have investigated answers to our initial problem statement which was "How can a well-designed and informative slideshow be created in Racket?", and tried to come with an illustration demonstrating the capabilities of Racket slideshow library as much as possible. 
 
 ![alt text](http://i.imgur.com/Go3FJHt.png "Logo Title Text 1")
 
-##Concepts Demnstrated
-(FILL IN HERE)
+##Concepts Demonstrated
+* Usage of Racket libraries
+* Constructing procedures using the special form lambda
+* Creating local variables using the special form let
+* Compound procedures
+* Procedures as arguments (HOP)
+* Conditional expressions and predicates
+* Symbolic Data (quotation)
 
 ##External Technologies
 * Pict Library
@@ -39,12 +47,28 @@ The below code is the main method used throught the slideshow for laying out and
 
 
 ####Merve
-(FILL IN HERE)
+The below code for setting slide background color is my favorite part because it not only uses special forms like lambda and let but also makes our slides colorful and fun. 
+[Source](http://lists.racket-lang.org/users/archive/2011-February/044148.html)
 
-####Working Notes
-* Song curently does not stop after slideshow ends. The only way to kill it is to close Dr.Racket. Comment out (play-sound) line if you dont want to deal with it. Working on a fix.
+```
+(current-slide-assembler
+  (let ([orig  (current-slide-assembler)])
+    (lambda (title sep body)
+      (let* ([pct  (if (background-image)
+                       (background-image-pict)
+                       (inset (blank 1024 768) (- margin)))]
+             [pct  (add-slide pct (orig title sep body))]
+             [pct  (if (slide-number) (add-slide-number pct) pct)])
+        pct))))
+```
+
+##Additional Remarks
+* Song curently does not stop after slideshow ends. The only way to kill it is to close Dr.Racket. Comment out (play-sound)  line if you dont want to deal with it. Working on a fix.
 * Images in repo must be in same folder as code to work. Backup copy of images canbe download from dropbox link below-- just move code to the iamge folder before running.
 * Slides are timed to change after twenty seconds. If you attempt to manually navigate the slideshow, slides will appear out of order.
 
-##Executing
+##How to Download and Run
+
 (FILL IN HERE)
+
+
