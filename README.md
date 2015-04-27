@@ -47,7 +47,8 @@ The below code is the main method used throught the slideshow for laying out and
 
 
 ####Merve
-The below code for setting slide background color is my favorite part because it not only uses special forms like lambda and let but also makes our slides colorful and fun. [source:](http://lists.racket-lang.org/users/archive/2011-February/044148.html)
+The below code for setting slide background color is my favorite part because it not only uses special forms like lambda and let but also makes our slides colorful and fun. 
+[Source](http://lists.racket-lang.org/users/archive/2011-February/044148.html)
 
 ```
 (current-slide-assembler
