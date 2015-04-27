@@ -3,9 +3,7 @@
 ###Alex Nevers and Merve Tuccar
 
 ##Overview
-This project uses multiple Racket libraries to present an aesthetically pleasing and informative presentation on military grade A.I.. This was an interesting project because Racket does not provide a "What You See Is What You Get" (WYSIWYG) interface such as MS PowerPoint, so we constructed our slides from the scratch. Slideshow, sound and pict Racket libraries are used for implementing the slides. There are 10 slides in total. The project was challenging because the documentation and examples on the libraries we used was very limited. 
-
-Overall, we have investigated answers to our initial problem statement which was "How can a well-designed and informative slideshow be created in Racket?", and tried to come with an illustration demonstrating the capabilities of Racket slideshow library as much as possible. 
+This project uses multiple Racket libraries to present an aesthetically pleasing and informative presentation on military grade A.I. There are 10 slides in total. The project was challenging because the documentation and examples on the libraries we used was very limited. We have investigated answers to our initial problem statement which was "How can a well-designed and informative slideshow be created in Racket?", and tried to come with an illustration demonstrating the capabilities of Racket slideshow library as much as possible. 
 
 ![alt text](http://i.imgur.com/Go3FJHt.png "Logo Title Text 1")
 
@@ -69,6 +67,6 @@ The below code for setting slide background color is my favorite part because it
 
 ##How to Download and Run
 
-(FILL IN HERE)
+Simply download the latest release from github, ensuring all images and relevant files are located in the same directory as the code and run. let the show run itself and do not attempt to navigaate manually, else slides will appear out of order.
 
 
