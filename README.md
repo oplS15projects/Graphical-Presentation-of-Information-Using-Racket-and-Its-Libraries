@@ -1,5 +1,5 @@
 # Graphical Presentation of Information Using Racket and Its Libraries
-##Lapsus OPL S15 Final Project
+##Team Lapsus OPL S15 Final Project @UMass Lowell CS
 ###Alex Nevers and Merve Tuccar
 
 ##Overview
@@ -65,6 +65,7 @@ The below code for setting slide background color is my favorite part because it
 * Song curently does not stop after slideshow ends. The only way to kill it is to close Dr.Racket. Comment out (play-sound)  line if you dont want to deal with it. Working on a fix.
 * Images in repo must be in same folder as code to work. Backup copy of images canbe download from dropbox link below-- just move code to the iamge folder before running.
 * Slides are timed to change after twenty seconds. If you attempt to manually navigate the slideshow, slides will appear out of order.
+
 ##How to Download and Run
 
 (FILL IN HERE)
