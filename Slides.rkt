@@ -99,7 +99,7 @@
 (background-image (bitmap "wallpaperg2.jpg"))
 
 
-(define audiopath "T2maintheme.wav")
+(define audiopath "T2maintheme1.wav")
 (define continue #f)
 ;;;(define (theme)(play-sound "T2maintheme.wav" #t))
 
@@ -215,8 +215,9 @@
               (vl-append (vl-append (t " ") (t " ")) (bitmap  "skynet-dos.png"))) 
   
    (vl-append (para #:align 'left #:fill? #t #:width 450 (tt "CYBERDYNE") "has compiled our most intelligent and innovative programmers to work on" (tt "SKYNET.") "After years of work, they have created the perfect, interconnected network that can think for itself.")
+              (vl-append (t " ")
               (para #:align 'left #:fill? #t #:width 450 (tt "SKYNET") "can learn at a geometric rate. Though it is not intelligent enough to be self-aware, it is the ultimate processor and relies on human input for decisions.")
- )))
+ ))))
  
  
 (slide
@@ -231,7 +232,7 @@
                 
                  (vl-append (vl-append (t " ")
                                        (t " "))
-                            (vl-append (para #:align 'center #:width 470(tt "SKYNET") "goes online on August 4, 1997.
+                            (vl-append (para #:align 'center #:width 420(tt "SKYNET") "goes online on August 4, 1997.
                              ")
                                        (para #:align 'center #:width 470 "Your future is in our trusted hands." )))))
  
@@ -252,7 +253,7 @@
                                       (para #:width 450 #:align 'left "© 1997" (tt "CYBERDYNE SYSTEMS") "      ALL RIGHTS RESERVED
                                        "))
                            (vl-append (t " ")
-                                      (para #:width 450 #:align 'left "18144 El Camino Real, Sunnyvale, California")  )))
+                                      (para #:width 420 #:align 'left "18144 El Camino Real, Sunnyvale, California")  )))
  
  (hline 1000 5)
   (t " ")
