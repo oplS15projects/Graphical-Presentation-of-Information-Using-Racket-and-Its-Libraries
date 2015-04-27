@@ -10,7 +10,13 @@ Overall, we have investigated answers to our initial problem statement which was
 ![alt text](http://i.imgur.com/Go3FJHt.png "Logo Title Text 1")
 
 ##Concepts Demonstrated
-(FILL IN HERE)
+* Usage of Racket libraries
+* Constructing procedures using the special form lambda
+* Creating local variables using the special form let
+* Compound procedures
+* Procedures as arguments (HOP)
+* Conditional expressions and predicates
+* Symbolic Data (quotation)
 
 ##External Technologies
 * Pict Library
