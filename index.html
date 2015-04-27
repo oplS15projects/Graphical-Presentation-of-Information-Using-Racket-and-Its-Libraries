@@ -29,22 +29,48 @@
     <div class="container">
       <section id="main_content">
         <h1>
-<a id="top-secret-cyberdyne-files" class="anchor" href="#top-secret-cyberdyne-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>TOP SECRET CYBERDYNE FILES</h1>
+<a id="graphical-presentation-of-information-using-racket-and-its-libraries" class="anchor" href="#graphical-presentation-of-information-using-racket-and-its-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graphical Presentation of Information Using Racket and Its Libraries</h1>
 
 <h2>
-<a id="level-5-clearance-or-higher" class="anchor" href="#level-5-clearance-or-higher" aria-hidden="true"><span class="octicon octicon-link"></span></a>LEVEL 5 CLEARANCE OR HIGHER</h2>
+<a id="team-lapsus-opl-s15-final-project-umass-lowell-cs" class="anchor" href="#team-lapsus-opl-s15-final-project-umass-lowell-cs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Team Lapsus OPL S15 Final Project <a href="https://github.com/UMass" class="user-mention">@UMass</a> Lowell CS</h2>
 
-<h4>
-<a id="executing" class="anchor" href="#executing" aria-hidden="true"><span class="octicon octicon-link"></span></a>EXECUTING</h4>
+<h3>
+<a id="alex-nevers-and-merve-tuccar" class="anchor" href="#alex-nevers-and-merve-tuccar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alex Nevers and Merve Tuccar</h3>
+
+<h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h2>
+
+<p>This project uses multiple Racket libraries to present an aesthetically pleasing and informative presentation on military grade A.I.. This was an interesting project because Racket does not provide a "What You See Is What You Get" (WYSIWYG) interface such as MS PowerPoint, so we constructed our slides from the scratch. Slideshow, sound and pict Racket libraries are used for implementing the slides. There are 10 slides in total. The project was challenging because the documentation and examples on the libraries we used was very limited. </p>
+
+<p>Overall, we have investigated answers to our initial problem statement which was "How can a well-designed and informative slideshow be created in Racket?", and tried to come with an illustration demonstrating the capabilities of Racket slideshow library as much as possible. </p>
+
+<p><img src="http://i.imgur.com/Go3FJHt.png" alt="alt text" title="Logo Title Text 1"></p>
+
+<h2>
+<a id="concepts-demonstrated" class="anchor" href="#concepts-demonstrated" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concepts Demonstrated</h2>
 
 <ul>
-<li>To run this program, type (run) after compiling</li>
-<li>Images in repo must be in same folder as code to work. Backup copy of images canbe download from dropbox link below-- just move code to the image folder before running.</li>
-<li>Slides are timed to change after twenty seconds. If you attempt to manually navigate the slideshow, slides will appear out of order.</li>
+<li>Usage of Racket libraries</li>
+<li>Constructing procedures using the special form lambda</li>
+<li>Creating local variables using the special form let</li>
+<li>Compound procedures</li>
+<li>Procedures as arguments (HOP)</li>
+<li>Conditional expressions and predicates</li>
+<li>Symbolic Data (quotation)</li>
 </ul>
 
-<h4>
-<a id="external-links" class="anchor" href="#external-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>EXTERNAL LINKS</h4>
+<h2>
+<a id="external-technologies" class="anchor" href="#external-technologies" aria-hidden="true"><span class="octicon octicon-link"></span></a>External Technologies</h2>
+
+<ul>
+<li>Pict Library</li>
+<li>Slideshow Library</li>
+<li>GUI Library</li>
+<li><a href="http://lists.racket-lang.org/users/archive/2011-February/044148.html">Slide assembly code</a></li>
+</ul>
+
+<h3>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links</h3>
 
 <ul>
 <li>Images to be used are <a href="http://imgur.com/a/L5IZ4">here</a>.</li>
@@ -54,25 +80,56 @@
 </li>
 </ul>
 
-<h3>
-<a id="first-draft" class="anchor" href="#first-draft" aria-hidden="true"><span class="octicon octicon-link"></span></a>FIRST DRAFT</h3>
+<h2>
+<a id="favorite-lines-of-code" class="anchor" href="#favorite-lines-of-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Favorite Lines of Code</h2>
+
+<h4>
+<a id="alex" class="anchor" href="#alex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alex</h4>
+
+<p>The below code is the main method used throught the slideshow for laying out and wrapping text. This code is demonstrated in slide 2, and though it doesnt look incredibly impressive, I felt pretty successful after figuring out how to overlay images and text in a clean, legible way.</p>
+
+<pre><code>(lt-superimpose 
+    (hc-append
+              (para #:align 'left #:fill? #t #:width 470 "         ")
+              (bitmap  "cyberdyne_behind_the_scenes.jpg")) 
+  (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Artificial Intelligence") 
+              (vl-append 
+                         (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Neural Network Processes")
+                                    (item #:bullet (bitmap (arrowhead 20 0)) #:width 470 "Advanced Robotics for Medicine"))
+                         (vl-append (item #:bullet (bitmap (arrowhead 20 0)) "Consumer Products")
+                                    (item  #:bullet (bitmap (arrowhead 20 0)) "Defense"))))))
+</code></pre>
+
+<h4>
+<a id="merve" class="anchor" href="#merve" aria-hidden="true"><span class="octicon octicon-link"></span></a>Merve</h4>
+
+<p>The below code for setting slide background color is my favorite part because it not only uses special forms like lambda and let but also makes our slides colorful and fun. 
+<a href="http://lists.racket-lang.org/users/archive/2011-February/044148.html">Source</a></p>
+
+<pre><code>(current-slide-assembler
+  (let ([orig  (current-slide-assembler)])
+    (lambda (title sep body)
+      (let* ([pct  (if (background-image)
+                       (background-image-pict)
+                       (inset (blank 1024 768) (- margin)))]
+             [pct  (add-slide pct (orig title sep body))]
+             [pct  (if (slide-number) (add-slide-number pct) pct)])
+        pct))))
+</code></pre>
+
+<h2>
+<a id="additional-remarks" class="anchor" href="#additional-remarks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Remarks</h2>
 
 <ul>
-<li>Slides drafted in powerpoint</li>
-<li>titles and textual info added</li>
-<li>styles applied (draft)</li>
-<li>Styles applied at basic level (draft) such as coloring</li>
+<li>Song curently does not stop after slideshow ends. The only way to kill it is to close Dr.Racket. Comment out (play-sound)  line if you dont want to deal with it. Working on a fix.</li>
+<li>Images in repo must be in same folder as code to work. Backup copy of images canbe download from dropbox link below-- just move code to the iamge folder before running.</li>
+<li>Slides are timed to change after twenty seconds. If you attempt to manually navigate the slideshow, slides will appear out of order.</li>
 </ul>
 
-<h3>
-<a id="second-draft" class="anchor" href="#second-draft" aria-hidden="true"><span class="octicon octicon-link"></span></a>SECOND DRAFT</h3>
+<h2>
+<a id="how-to-download-and-run" class="anchor" href="#how-to-download-and-run" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Download and Run</h2>
 
-<ul>
-<li>All placeholder text replaced with actual info</li>
-<li>Most text formatted</li>
-<li>All images added to slides</li>
-<li>Slideshow now runs on loop</li>
-</ul>
+<p>(FILL IN HERE)</p>
       </section>
     </div>
 
